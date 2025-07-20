@@ -1,0 +1,41 @@
+# Build directories
+build/
+cmake-build-*/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Compiled files
+*.o
+*.so
+*.dylib
+*.dll
+*.exe
+hkex_gateway
+
+# Configuration
+config.ini
+
+# Log files
+*.log
+logs/
+
+# Dependencies
+external/omnet/lib/
+
+# macOS files
+.DS_Store
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+
+# Generated files
+*.generated.cpp
+*.generated.h 

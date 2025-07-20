@@ -1,0 +1,47 @@
+[Connection]
+# HKEX connection settings
+host = ocg-trade.hkex.com.hk
+port = 8080
+env = PROD  # PROD or UAT
+
+[Authentication]
+username = 
+password = 
+client_id = 
+session_id = 
+
+[Trading]
+# Trading parameters
+max_orders = 1000
+max_tps = 100
+default_market = MAIN  # MAIN or GEM
+auto_reconnect = true
+reconnect_interval = 5000  # milliseconds
+retry_attempts=3
+retry_delay_ms=1000
+
+[MarketData]
+# Market data settings
+subscription_mode = SNAPSHOT  # SNAPSHOT or STREAMING
+update_interval = 1000  # milliseconds
+symbols = HSI,HSTECH  # comma-separated list
+subscription_limit=100
+broadcast_buffer_size=10000
+
+[Logging]
+# Logging configuration
+log_level = INFO  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+log_file = gateway.log
+error_file = error.log
+trade_log = trades.log
+market_data_log = market_data.log
+
+[Security]
+# Security settings
+password_expiry_days=90
+session_timeout_minutes=480
+max_failed_attempts=3
+ssl_enabled = true
+ssl_cert = certs/client.crt
+ssl_key = certs/client.key
+ssl_ca = certs/ca.crt 
